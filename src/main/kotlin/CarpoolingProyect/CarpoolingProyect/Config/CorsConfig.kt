@@ -12,7 +12,8 @@ class CorsConfig: WebMvcConfigurer {
         registry.addMapping("/**")
             .allowedOrigins(
                 "http://localhost:8000",
-                "http://localhost:5173")
+                "http://localhost:5173",
+                "https://aventon-app.vercel.app")
             .allowedMethods("POST", "GET", "DELETE", "PATCH", "PUT")
             .allowCredentials(true)
     }
