@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  #Hot Swapping
+  devtools:
+    restart:
+      enabled: true
+  #Configuracion de migracion
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://ep-odd-snow-a5s1y92e.us-east-2.aws.neon.tech/carpooling?user=pozodavid060&password=ik9vK2XRHINx&sslmode=require
+    username: pozodavid060
+    password: ik9vK2XRHINx
+    driverClassName: org.postgresql.Driver
